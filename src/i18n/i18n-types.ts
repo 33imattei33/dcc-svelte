@@ -16,75 +16,511 @@ export type Translations = RootTranslation
 type RootTranslation = {
 	messages: {
 		/**
-		 * Decentralchain + Svelte
+		 * DecentralChain
 		 */
 		title: string
 		/**
-		 * Demo project for Decentralchain Signer authentication
+		 * Blockchain Explorer & Wallet
+		 */
+		subtitle: string
+		/**
+		 * A secure, scalable blockchain platform powered by Leased Proof of Stake (LPoS). Build dApps, manage tokens, and explore the DecentralChain ecosystem.
 		 */
 		description: string
+		/**
+		 * Features
+		 */
+		features: string
+		/**
+		 * LPoS Consensus — Energy-efficient, scalable block generation
+		 */
+		featureLpos: string
+		/**
+		 * Ride Language — Smart contracts made simple
+		 */
+		featureRide: string
+		/**
+		 * Decentral.Exchange — Native decentralized exchange
+		 */
+		featureDex: string
+		/**
+		 * Carbon Credits — Incentivized sustainability protocol
+		 */
+		featureCarbon: string
 	}
 	login: {
 		/**
-		 * Log in
+		 * Connect Wallet
 		 */
 		login: string
 		/**
-		 * Logging in...
+		 * Connecting...
 		 */
 		logging: string
 		/**
-		 * Logged  in as {address}
+		 * Connected: {address}
 		 * @param {string} address
 		 */
 		logged: RequiredParams<'address'>
+		/**
+		 * Disconnect
+		 */
+		logout: string
+		/**
+		 * Balance
+		 */
+		balance: string
 	}
 	footer: {
 		/**
-		 * Powered by
+		 * Built on
 		 */
 		poweredby: string
 		/**
-		 * Decentralchain
+		 * DecentralChain
 		 */
 		decentralchain: string
+	}
+	blockchain: {
+		/**
+		 * Blockchain Status
+		 */
+		title: string
+		/**
+		 * Block Height
+		 */
+		height: string
+		/**
+		 * Last Block
+		 */
+		lastBlock: string
+		/**
+		 * Block Generator
+		 */
+		generator: string
+		/**
+		 * Block Reward
+		 */
+		blockReward: string
+		/**
+		 * Total Supply
+		 */
+		totalSupply: string
+		/**
+		 * Consensus
+		 */
+		consensus: string
+		/**
+		 * Leased Proof of Stake
+		 */
+		lpos: string
+	}
+	wallet: {
+		/**
+		 * Wallet
+		 */
+		title: string
+		/**
+		 * Your Address
+		 */
+		yourAddress: string
+		/**
+		 * View on DecentralScan
+		 */
+		viewOnExplorer: string
+		/**
+		 * Overview
+		 */
+		overview: string
+		/**
+		 * Assets
+		 */
+		assets: string
+		/**
+		 * Transactions
+		 */
+		transactions: string
+		/**
+		 * DCC Balance
+		 */
+		dccBalance: string
+		/**
+		 * Token Count
+		 */
+		tokenCount: string
+		/**
+		 * No assets found
+		 */
+		noAssets: string
+		/**
+		 * No transactions found
+		 */
+		noTransactions: string
+	}
+	transfer: {
+		/**
+		 * Send DCC
+		 */
+		title: string
+		/**
+		 * Recipient Address
+		 */
+		recipient: string
+		/**
+		 * Amount
+		 */
+		amount: string
+		/**
+		 * Memo (optional)
+		 */
+		attachment: string
+		/**
+		 * Add a note to this transfer
+		 */
+		attachmentPlaceholder: string
+		/**
+		 * Network Fee
+		 */
+		fee: string
+		/**
+		 * Send Transfer
+		 */
+		send: string
+		/**
+		 * Sending...
+		 */
+		sending: string
+		/**
+		 * Transfer successful!
+		 */
+		success: string
+		/**
+		 * Connect your wallet to send DCC
+		 */
+		loginRequired: string
+	}
+	explorer: {
+		/**
+		 * Explorer
+		 */
+		title: string
+		/**
+		 * Search by address, transaction ID, or block height...
+		 */
+		searchPlaceholder: string
+		/**
+		 * Recent Blocks
+		 */
+		recentBlocks: string
+		/**
+		 * No results found
+		 */
+		notFound: string
+		/**
+		 * Search failed
+		 */
+		searchError: string
+		/**
+		 * Address Info
+		 */
+		addressInfo: string
+		/**
+		 * Transaction Info
+		 */
+		transactionInfo: string
+		/**
+		 * Block Info
+		 */
+		blockInfo: string
+		/**
+		 * Regular
+		 */
+		regular: string
+		/**
+		 * Available
+		 */
+		available: string
+		/**
+		 * Effective
+		 */
+		effective: string
+		/**
+		 * Generating
+		 */
+		generating: string
+	}
+	nav: {
+		/**
+		 * Home
+		 */
+		home: string
+		/**
+		 * Explorer
+		 */
+		explorer: string
+		/**
+		 * Wallet
+		 */
+		wallet: string
+		/**
+		 * Transfer
+		 */
+		transfer: string
 	}
 }
 
 export type TranslationFunctions = {
 	messages: {
 		/**
-		 * Decentralchain + Svelte
+		 * DecentralChain
 		 */
 		title: () => LocalizedString
 		/**
-		 * Demo project for Decentralchain Signer authentication
+		 * Blockchain Explorer & Wallet
+		 */
+		subtitle: () => LocalizedString
+		/**
+		 * A secure, scalable blockchain platform powered by Leased Proof of Stake (LPoS). Build dApps, manage tokens, and explore the DecentralChain ecosystem.
 		 */
 		description: () => LocalizedString
+		/**
+		 * Features
+		 */
+		features: () => LocalizedString
+		/**
+		 * LPoS Consensus — Energy-efficient, scalable block generation
+		 */
+		featureLpos: () => LocalizedString
+		/**
+		 * Ride Language — Smart contracts made simple
+		 */
+		featureRide: () => LocalizedString
+		/**
+		 * Decentral.Exchange — Native decentralized exchange
+		 */
+		featureDex: () => LocalizedString
+		/**
+		 * Carbon Credits — Incentivized sustainability protocol
+		 */
+		featureCarbon: () => LocalizedString
 	}
 	login: {
 		/**
-		 * Log in
+		 * Connect Wallet
 		 */
 		login: () => LocalizedString
 		/**
-		 * Logging in...
+		 * Connecting...
 		 */
 		logging: () => LocalizedString
 		/**
-		 * Logged  in as {address}
+		 * Connected: {address}
 		 */
 		logged: (arg: { address: string }) => LocalizedString
+		/**
+		 * Disconnect
+		 */
+		logout: () => LocalizedString
+		/**
+		 * Balance
+		 */
+		balance: () => LocalizedString
 	}
 	footer: {
 		/**
-		 * Powered by
+		 * Built on
 		 */
 		poweredby: () => LocalizedString
 		/**
-		 * Decentralchain
+		 * DecentralChain
 		 */
 		decentralchain: () => LocalizedString
+	}
+	blockchain: {
+		/**
+		 * Blockchain Status
+		 */
+		title: () => LocalizedString
+		/**
+		 * Block Height
+		 */
+		height: () => LocalizedString
+		/**
+		 * Last Block
+		 */
+		lastBlock: () => LocalizedString
+		/**
+		 * Block Generator
+		 */
+		generator: () => LocalizedString
+		/**
+		 * Block Reward
+		 */
+		blockReward: () => LocalizedString
+		/**
+		 * Total Supply
+		 */
+		totalSupply: () => LocalizedString
+		/**
+		 * Consensus
+		 */
+		consensus: () => LocalizedString
+		/**
+		 * Leased Proof of Stake
+		 */
+		lpos: () => LocalizedString
+	}
+	wallet: {
+		/**
+		 * Wallet
+		 */
+		title: () => LocalizedString
+		/**
+		 * Your Address
+		 */
+		yourAddress: () => LocalizedString
+		/**
+		 * View on DecentralScan
+		 */
+		viewOnExplorer: () => LocalizedString
+		/**
+		 * Overview
+		 */
+		overview: () => LocalizedString
+		/**
+		 * Assets
+		 */
+		assets: () => LocalizedString
+		/**
+		 * Transactions
+		 */
+		transactions: () => LocalizedString
+		/**
+		 * DCC Balance
+		 */
+		dccBalance: () => LocalizedString
+		/**
+		 * Token Count
+		 */
+		tokenCount: () => LocalizedString
+		/**
+		 * No assets found
+		 */
+		noAssets: () => LocalizedString
+		/**
+		 * No transactions found
+		 */
+		noTransactions: () => LocalizedString
+	}
+	transfer: {
+		/**
+		 * Send DCC
+		 */
+		title: () => LocalizedString
+		/**
+		 * Recipient Address
+		 */
+		recipient: () => LocalizedString
+		/**
+		 * Amount
+		 */
+		amount: () => LocalizedString
+		/**
+		 * Memo (optional)
+		 */
+		attachment: () => LocalizedString
+		/**
+		 * Add a note to this transfer
+		 */
+		attachmentPlaceholder: () => LocalizedString
+		/**
+		 * Network Fee
+		 */
+		fee: () => LocalizedString
+		/**
+		 * Send Transfer
+		 */
+		send: () => LocalizedString
+		/**
+		 * Sending...
+		 */
+		sending: () => LocalizedString
+		/**
+		 * Transfer successful!
+		 */
+		success: () => LocalizedString
+		/**
+		 * Connect your wallet to send DCC
+		 */
+		loginRequired: () => LocalizedString
+	}
+	explorer: {
+		/**
+		 * Explorer
+		 */
+		title: () => LocalizedString
+		/**
+		 * Search by address, transaction ID, or block height...
+		 */
+		searchPlaceholder: () => LocalizedString
+		/**
+		 * Recent Blocks
+		 */
+		recentBlocks: () => LocalizedString
+		/**
+		 * No results found
+		 */
+		notFound: () => LocalizedString
+		/**
+		 * Search failed
+		 */
+		searchError: () => LocalizedString
+		/**
+		 * Address Info
+		 */
+		addressInfo: () => LocalizedString
+		/**
+		 * Transaction Info
+		 */
+		transactionInfo: () => LocalizedString
+		/**
+		 * Block Info
+		 */
+		blockInfo: () => LocalizedString
+		/**
+		 * Regular
+		 */
+		regular: () => LocalizedString
+		/**
+		 * Available
+		 */
+		available: () => LocalizedString
+		/**
+		 * Effective
+		 */
+		effective: () => LocalizedString
+		/**
+		 * Generating
+		 */
+		generating: () => LocalizedString
+	}
+	nav: {
+		/**
+		 * Home
+		 */
+		home: () => LocalizedString
+		/**
+		 * Explorer
+		 */
+		explorer: () => LocalizedString
+		/**
+		 * Wallet
+		 */
+		wallet: () => LocalizedString
+		/**
+		 * Transfer
+		 */
+		transfer: () => LocalizedString
 	}
 }
 

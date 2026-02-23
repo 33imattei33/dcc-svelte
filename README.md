@@ -3,11 +3,11 @@
 </p>
 
 <h1 align="center">
-DCC + Svelte
+DecentralChain + Svelte
 </h1><br>
 
 <p align="center">
-This template combines <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a> - the official framework for building svelte apps, with the <a href="https://decentralchain.io/" target="_blank">Decentralchain's</a> blockchain, it allows you to log into your <a href="https://decentral.exchange/" target="_blank">decentral.exchange</a> wallet. You can expand by adding your own functionality from there. 
+A comprehensive <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a> application for the <a href="https://decentralchain.io/" target="_blank">DecentralChain</a> blockchain ecosystem. Features a real-time blockchain explorer, wallet integration via <a href="https://decentral.exchange/" target="_blank">Decentral.Exchange</a>, token management, and DCC transfers — all built on DecentralChain's LPoS (Leased Proof of Stake) consensus protocol.
 </p>
 
 <br>
@@ -18,24 +18,44 @@ This template combines <a href="https://kit.svelte.dev/" target="_blank">SvelteK
 
 ## Features
 
-- <a href="https://kit.svelte.dev/" target="_blank">💚 SvelteKit</a> - SSR, File-based API endpoints (REST services), File-based routing, etc.
+- 🔗 **DecentralChain Integration** — Connect to DecentralChain mainnet (`mainnet-node.decentralchain.io`)
+- 📊 **Blockchain Explorer** — Real-time block height, block rewards, total supply, recent blocks
+- 🔍 **Search** — Search by address, transaction ID, or block height
+- 👛 **Wallet Dashboard** — View DCC balance, token holdings, and recent transactions
+- 💸 **DCC Transfers** — Send DecentralCoin with the built-in transfer form
+- 💚 **[SvelteKit](https://kit.svelte.dev/)** — SSR, file-based routing, API endpoints
+- ⚡️ **[Vite](https://vitejs.dev/)** + **[svelte-hmr](https://github.com/sveltejs/svelte-hmr)** — Instant HMR
+- 🎨 **[UnoCSS](https://github.com/antfu/unocss)** — Atomic CSS engine with icon support
+- 🌙 **Dark mode** — via [svelte-dark-mode](https://github.com/metonym/svelte-dark-mode)
+- 🚩 **Localization (i18n)** — English & Spanish via [typesafe-i18n](https://typesafe-i18n.pages.dev)
+- 🦾 **TypeScript**
 
-- ⚡️ <a href="https://vitejs.dev/" target="_blank">Vite</a> + <a href="https://github.com/sveltejs/svelte-hmr" target="_blank">svelte-hmr</a> - Instant HMR
+## DecentralChain Ecosystem
 
-- 🎨 <a href="https://github.com/antfu/unocss" target="_blank">UnoCSS</a> - The instant on-demand atomic CSS engine.
+| Service | URL |
+|---------|-----|
+| Website | [decentralchain.io](https://decentralchain.io) |
+| Documentation | [docs.decentralchain.io](https://docs.decentralchain.io) |
+| Exchange | [decentral.exchange](https://decentral.exchange) |
+| Block Explorer | [decentralscan.com](https://decentralscan.com) |
+| Mainnet Node | `https://mainnet-node.decentralchain.io` |
+| Testnet Node | `https://testnet-node.decentralchain.io` |
 
-- 😃 Icons from any icon sets in Pure CSS, powered by <a href="https://github.com/antfu/unocss" target="_blank">UnoCSS</a>
+## API Endpoints Used
 
-- 🌙 Dark mode supported via <a href="https://github.com/metonym/svelte-dark-mode" target="_blank">svelte-dark-mode</a>
-
-- 🚩 Localization (i18n) by <a href="typesafe-i18n.pages.dev" target="_blank">typesafe-i18n</a>
-
-- 🦾 TypeScript
+- `GET /blocks/height` — Current blockchain height
+- `GET /blocks/last` — Latest block data
+- `GET /blockchain/rewards` — Block reward & total supply info
+- `GET /blocks/headers/seq/{from}/{to}` — Block headers sequence
+- `GET /addresses/balance/details/{address}` — DCC balance details
+- `GET /assets/balance/{address}` — All token balances
+- `GET /transactions/address/{address}/limit/{limit}` — Recent transactions
+- `GET /transactions/info/{id}` — Transaction by ID
 
 ## Variations
 
-- <a href="https://github.com/jourlez/dcc-nuxt3" target="_blank">Nuxt 3</a> - Nuxt 3.
-- <a href="https://github.com/jourlez/dcc-solidjs" target="_blank">SolidJS</a> - SolidJS version.
+- <a href="https://github.com/jourlez/dcc-nuxt3" target="_blank">Nuxt 3</a> — Nuxt 3 version
+- <a href="https://github.com/jourlez/dcc-solidjs" target="_blank">SolidJS</a> — SolidJS version
 
 ## Try it now!
 
@@ -49,24 +69,15 @@ This template combines <a href="https://kit.svelte.dev/" target="_blank">SvelteK
 
 ### Clone to local
 
-If you prefer to do it manually
-
 ```bash
 git clone https://github.com/jourlez/dcc-svelte
 cd dcc-svelte
 ```
 
-Make sure to install the dependencies:
+Install dependencies:
 
 ```bash
-# yarn
-yarn install
-
-# npm
 npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
 
 Start the development server:
@@ -74,3 +85,5 @@ Start the development server:
 ```bash
 npm run dev
 ```
+
+The app will be available at `http://localhost:5173`.
